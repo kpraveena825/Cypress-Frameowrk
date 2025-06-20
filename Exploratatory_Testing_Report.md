@@ -1,5 +1,9 @@
 ### Exploratory Testing Charter: ###
 
+**Application under Test** : *https://goodbudget.com/*
+
+
+
 | Charter | Priority | Reason                                                                                   |
 |---------|----------|------------------------------------------------------------------------------------------|
 | C1      | High     | Security issues in login/signup can compromise app safety and make it vulnerable to cyberattacks. |
@@ -22,18 +26,18 @@
 - Verify that invalid inputs do not get saved or passed to APIs and database. 
 
 #### C3 -Verify core functional behaviors such as transactions, Envelop,Login and SignUp ####
-**LOGIN:**
+###### LOGIN: ######
  - Successful login with valid credentials redirects to the home page.
  - Signup flow correctly stores user data and sends a confirmation email
 
- **TRANSACTION:**
+ ###### TRANSACTION: ######
  - Add a new transactions and check it's saved properly and Availabe balance is updated accordingly.
  - Edit and delete existing transactions and verify Ui update and database Synch
  - Check behavior on invalid, empty or negative transaction submissions
  - Verify transfer, Income, debt Transaction, Expense Credit functionalities
  - Check for export transaction reulting in CSV file download and Import transaction is allowing to upload the file. 
 
- **ENVELOPES:**
+ ###### ENVELOPES: ######
  - Verify Add, edit, and delete envelopes.
  - Ensure updated envelope budgets reflect correctly in totals
  - Check -ve and invalid amount is not accepted while setting the budget
@@ -41,7 +45,7 @@
  - Validate Add more Envelopes functionality 
  - Verify Bufget scheduling functionalities
 
-**OTHER VALIDATIONS:**
+###### OTHER VALIDATIONS: ######
  - Verifng the navigation sections/Subheader like <br>
    reports generation under Report, Guideline under Help and Links accesibility under Learns Header
 
@@ -58,7 +62,7 @@
 
 ### Findings from the Charter ###
 
-#### Defects ####
+ #### Defects ####
 
 | Component | Priority | Description                                                                                                                   |
 |-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -75,6 +79,7 @@
 
 #### Needs Improvement ####
 
+
 | Component | Description                                                                                                                     |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------|
 | C1        | Login error messages are not clear. The same generic message is shown for both incorrect email and password, making it hard for users to identify the issue. |
@@ -86,24 +91,24 @@
 
 ### Risk to mitigate ###
 
-**Security Risk**
+**Security Risk:** 
 exposing sensitive information  
 - API is storing credentials and weak validation on email, passwords would make application vulnerable to attacks.
-- Missing Secure flag in cookies can risk the application
+- Missing Secure flag in cookies can risk the application.
 
-**Usability Risks**
-Address cross-browser compatibility and responsive design to ensure the app works well on all devices and browsers.
-- HTML document does not correctly define the character encoding, this can lead to Inconsistent rendering across browsers or devices - Identified by Lighthouse
+**Usability Risks:** 
+Need to address cross-browser compatibility and responsive design to ensure the app works well on all devices and browsers.
+- HTML document does not correctly define the character encoding, this can lead to Inconsistent rendering across browsers or devices - **Identified by Lighthouse**
 
-**Data Privacy Risk**
+**Data Privacy Risk:** 
 Exposing sensitive info via API 
-- Financial apps must safeguard personal and budget data of users
+- Financial apps must safeguard user personal and budget data.
 
-**Input Validation**
+**Input Validation:** 
 Accepting invalid data (e.g., wrong amount, bad email)	
 - Could cause wrong financial calculations and shows weak appication behavior (users might lose trust)
 
-**Inresponsive Design**
+**Unresponsive Design:** 
 Layouts not adapting to mobile screens for few pages
 - Mobile users may find the app unusable and lead to loosing a potentianl user. 
 
