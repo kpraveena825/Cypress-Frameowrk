@@ -6,8 +6,9 @@ Cypress test automation framework built with **JavaScript (JS)** that follows th
 ---
 
 **Application under test : https://goodbudget.com/**
-I have considered three critical flows for automation:
-Login, adding an income transaction, and adding/updating an envelope, followed by validating the updated values in the totals section. 
+- I have considered three critical flows for automation:<br>
+Login, adding an income transaction, and adding/updating an envelope, followed by validating the updated values in the totals section.
+- To support parallel execution and prevent validation errors caused by session conflicts and shared account updates, credentials are managed per browser. During test execution, the appropriate set of credentials is automatically selected based on the browser in use.
 
 ### Prerequisites
 
