@@ -6,6 +6,8 @@ Cypress test automation framework built with **JavaScript (JS)** that follows th
 ---
 
 **Application under test : https://goodbudget.com/**
+I have considered three critical flows for automation:
+Login, adding an income transaction, and adding/updating an envelope, followed by validating the updated values in the totals section. 
 
 ### Prerequisites
 
@@ -21,18 +23,6 @@ Ensure the following tools are installed:
 ---
 
 ### Tech Stack
-
-| Layer                   | Tools / Libraries                                  |
-|-------------------------|----------------------------------------------------|
-| Language                | JavaScript                                         |
-| UI Testing              | Cypress                                            |
-| Build Tool              | Node.js                                            |
-| Containerization        | Docker                                             |
-| Reporting               | Mochawesome Reporter (via Cypress)                 |
-| Design Pattern          | Page Object Model (POM)                            |
-| Continuous Integration  | Jenkins                                            |
-| Version Control         | Git                                                |
-| Code Quality            | ESLint                                             |
 
 - **Cypress:** is a modern JavaScript-based testing framework, faster, and provides excellent debugging capabilities, making it ideal for UI automation of modern web applications.
 - **JavaScript:** was chosen as it's the language of the web and seamlessly integrates with Cypress and the application under test.
@@ -117,11 +107,11 @@ java -Dfile.encoding=UTF-8 -jar jenkins.war
    ```
 - add HTML Publisher Plugin from [Manage Jenkins -> Plugins] This will allow us to publish Mochawesome HTML reports
 
-**Here is how the Jenkins Console Output will look like:**
+**Sample report for Jenkins:**
 ![image](https://github.com/user-attachments/assets/1a9d2e35-061f-4a68-9b46-f7645910db4c)
 ![image](https://github.com/user-attachments/assets/8ef9c373-b3bf-4d5a-b688-54cceafea3c7)
 
-#### Docker multiBrowser parallel execution
+#### Docker multi browser parallel execution
 To execute test using Docker, we can do the following in our terminal
  - Build the docker image from Dockerfile
 ``` bash
@@ -145,8 +135,8 @@ docker-compose -f docker-compose-browsers up
 - https://www.browserstack.com/guide/cypress-docker-tutorial
 - https://www.lambdatest.com/learning-hub/cypress-docker
 
-YouTUBE
+Youtube
 
-- Docker Cypress JoanMedia
+- Docker Cypress by JoanMedia
 
 
